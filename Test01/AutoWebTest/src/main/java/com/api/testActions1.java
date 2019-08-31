@@ -36,14 +36,26 @@ public class testActions1 {
         driver.findElement(By.linkText("Refain - 博客园")).click();
         Set<String> windowHandles = driver.getWindowHandles();
         for (String newWindow:windowHandles) {
-            if (!oldWindowHandle.equals(newWindow)){
-                driver.switchTo().window(newWindow);
+//            if (!oldWindowHandle.equals(newWindow)){
+//                driver.switchTo().window(newWindow);
+//                break;
+//            }
+            //第二种实现方式：直接切换到当前窗口，获取页面的标题，根据标题是否相等开判断
+            driver.switchTo().window(newWindow);
+            String title = driver.getTitle();
+            if (title.equals("Refain - 博客园")){
+                break;
+            }
+            //第三种实现方法：用contains关键字
+            driver.switchTo().window(newWindow);
+            String pageSource = driver.getPageSource();
+            if (pageSource.contains("Selenium+java - Page Object设计模式")){
                 break;
             }
         }
+        String title1 = driver.getTitle();
         driver.findElement(By.linkText("Selenium+java - PageFactory设计模式")).click();
-        System.out.println(driver.getTitle());
-        sleep(3);
+        sleep(2);
     }
     @AfterTest
     public void afterTest(){
