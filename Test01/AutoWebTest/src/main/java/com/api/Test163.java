@@ -2,7 +2,6 @@ package com.api;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -26,12 +25,11 @@ public class Test163 {
     }
     @Test
     public void test163(){
-        sleep(3);
-
+        sleep(2);
         driver.findElement(By.id("kw")).sendKeys("163");
         driver.findElement(By.id("su")).click();
         String oldWindowHandle = driver.getWindowHandle();
-        sleep(3);
+        sleep(2);
         driver.findElement(By.linkText("163网易免费邮箱官方登录")).click();
         Set<String> windowHandles = driver.getWindowHandles();
         for (String window:windowHandles) {
@@ -42,11 +40,13 @@ public class Test163 {
                 driver.close();
             }
         }
-        sleep(5);
+        sleep(2);
         driver.findElement(By.cssSelector("#switchAccountLogin")).click();
         driver.switchTo().frame(0);
         driver.findElement(By.name("email")).sendKeys("1257542@qq.com");
+        sleep(1);
         driver.findElement(By.name("password")).sendKeys("2124545");
+        sleep(1);
         driver.findElement(By.id("dologin")).click();
     }
     public void sleep(int i){
