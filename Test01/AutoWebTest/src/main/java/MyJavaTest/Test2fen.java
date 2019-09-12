@@ -11,7 +11,6 @@ public class Test2fen {
         int value=5;
         Arrays.sort(a);
         System.out.println(value+"元素的索引为："+test2fen(a,value));
-
     }
     public static int test2fen(int[] a,int value){
         int low=0;
