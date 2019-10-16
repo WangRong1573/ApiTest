@@ -27,5 +27,6 @@ public class FileDemo01 {
         src=new File(String.valueOf(new File("G/GitRes/StudyIO","test.png")));
         System.out.println(src.length());
 
+
     }
 }
