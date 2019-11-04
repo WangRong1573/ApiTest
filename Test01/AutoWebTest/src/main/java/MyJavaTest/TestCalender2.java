@@ -53,7 +53,5 @@ public class TestCalender2 {
             //每打完一次，日期加一天
             c.add(Calendar.DAY_OF_MONTH,1);
         }
-
-
     }
 }
