@@ -22,6 +22,9 @@ public class TestWrapper01 {
 
         //Integer对象转换成字符串
         String s=s1.toString();
+
+        TestWrapper01 t=new TestWrapper01();
+        t.test();
     }
 
     //自动装箱和自动拆箱
@@ -33,5 +36,18 @@ public class TestWrapper01 {
         //自动拆箱
         //此处等价于int i=i1.intValue();
         int i=i1;
+
+        //缓存
+        //区间[-128,127)，如果处于区间内，可以之间去，否则会new Integer对象
+        Integer i3=-128;
+        Integer i4=-128;
+        System.out.println(i3==i4);//true
+        System.out.println(i3.equals(i4));//true
+
+        //不在缓存区间内
+        Integer i5=345;
+        Integer i6=345;
+        System.out.println(i5==i6);//false
+        System.out.println(i5.equals(i6));//true
     }
 }
