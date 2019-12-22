@@ -2,6 +2,14 @@ package com.array;
 
 /**
  * String类常用方法
+ *
+ *  1. String类的下述方法能创建并返回一个新的String对象: concat()、 replace()、substring()、 toLowerCase()、 toUpperCase()、trim()。
+ *
+ *  2. 提供查找功能的有关方法: endsWith()、 startsWith()、 indexOf()、lastIndexOf()。
+ *
+ *  3. 提供比较功能的方法: equals()、equalsIgnoreCase()、compareTo()。
+ *
+ *  4. 其它方法: charAt() 、length()。
  * @author rong.wang
  * @date 20:34  2019/12/22
  */
