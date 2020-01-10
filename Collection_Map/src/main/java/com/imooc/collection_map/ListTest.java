@@ -75,11 +75,21 @@ public class ListTest {
         }
     }
 
+    /**
+     * 修改list集合中的元素
+     * set(index,element);
+     */
+    public void testModify(){
+        coursesToSelect.set(4,new Coures(7,"selenium从入门到入土"));
+    }
+
     //测试
     public static void main(String[] args) {
         ListTest lt=new ListTest();
         lt.addCourse();
         lt.testGet();
+        lt.testForeach();
+        lt.testModify();
         lt.testForeach();
     }
 }
